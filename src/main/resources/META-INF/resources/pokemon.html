@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Pokemon Center</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Load AngularJS -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("PokemonManagement", []);
+
+        app.controller("PokemonManagementController", function ($scope, $http) {
+
+            $scope.pokemonList = [];
+
+            _refreshPageData();
+
+            function _refreshPageData() {
+                $http({
+                    method: 'GET',
+                    url: '/pokemon'
+                }).then(function successCallback(response) {
+                    $scope.pokemonList = response.data;
+                }, function errorCallback(response) {
+                    console.log(response.statusText);
+                });
+            }
+        });
+    </script>
+</head>
+<body ng-app="PokemonManagement" ng-controller="PokemonManagementController">
+
+<div class="container-fluid">
+    <h1>Pokemon Center</h1>
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Height</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Attack</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="pokemon in pokemonList">
+            <td>{{ pokemon.name }}</td>
+            <td>{{ pokemon.type }}</td>
+            <td>{{ pokemon.height }}</td>
+            <td>{{ pokemon.weight }}</td>
+            <td>{{ pokemon.attack }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
