@@ -22,13 +22,13 @@ public class PokemonResourceTest {
 
     private String getExpectedBody() {
 
-        return "[{\"id\":3,\"attack\":\"Hydro Cannon\",\"height\":\"1.6m\",\"name\":\"Blastoise\",\"type\":\"Water\",\"weight\":\"88.5kg\"}," +
-                "{\"id\":2,\"attack\":\"Flamethrower\",\"height\":\"1.7m\",\"name\":\"Charizard\",\"type\":\"Fire/Dragon\",\"weight\":\"90.5kg\"}," +
-                "{\"id\":6,\"attack\":\"Quick attack\",\"height\":\"0.3m\",\"name\":\"Eevee\",\"type\":\"Normal\",\"weight\":\"6.5kg\"}," +
-                "{\"id\":5,\"attack\":\"Splash\",\"height\":\"0.9m\",\"name\":\"Magikarp\",\"type\":\"Water\",\"weight\":\"10kg\"}," +
-                "{\"id\":8,\"attack\":\"Psychic\",\"height\":\"0.4m\",\"name\":\"Mew\",\"type\":\"Psychic\",\"weight\":\"4.0kg\"}," +
-                "{\"id\":1,\"attack\":\"Thunderbolt\",\"height\":\"0.4m\",\"name\":\"Pikachu\",\"type\":\"Electric\",\"weight\":\"6.0kg\"}," +
-                "{\"id\":7,\"attack\":\"Hyper Beam\",\"height\":\"2.1m\",\"name\":\"Snorlax\",\"type\":\"Normal\",\"weight\":\"460kg\"}," +
-                "{\"id\":4,\"attack\":\"Solar Beam\",\"height\":\"2.0m\",\"name\":\"Venusaur\",\"type\":\"Grass/Poison\",\"weight\":\"100kg\"}]";
+        return "[{\"id\":3,\"attack\":\"Hydro Cannon\",\"height\":\"1.6m\",\"name\":\"Blastoise\",\"type\":\"Water\",\"typeColour\":\"blue\",\"weight\":\"88.5kg\"}," +
+                "{\"id\":2,\"attack\":\"Flamethrower\",\"height\":\"1.7m\",\"name\":\"Charizard\",\"type\":\"Fire/Dragon\",\"typeColour\":\"red\",\"weight\":\"90.5kg\"}," +
+                "{\"id\":6,\"attack\":\"Quick attack\",\"height\":\"0.3m\",\"name\":\"Eevee\",\"type\":\"Normal\",\"typeColour\":\"grey\",\"weight\":\"6.5kg\"}," +
+                "{\"id\":5,\"attack\":\"Splash\",\"height\":\"0.9m\",\"name\":\"Magikarp\",\"type\":\"Water\",\"typeColour\":\"blue\",\"weight\":\"10kg\"}," +
+                "{\"id\":8,\"attack\":\"Psychic\",\"height\":\"0.4m\",\"name\":\"Mew\",\"type\":\"Psychic\",\"typeColour\":\"purple\",\"weight\":\"4.0kg\"}," +
+                "{\"id\":1,\"attack\":\"Thunderbolt\",\"height\":\"0.4m\",\"name\":\"Pikachu\",\"type\":\"Electric\",\"typeColour\":\"yellow\",\"weight\":\"6.0kg\"}," +
+                "{\"id\":7,\"attack\":\"Hyper Beam\",\"height\":\"2.1m\",\"name\":\"Snorlax\",\"type\":\"Normal\",\"typeColour\":\"grey\",\"weight\":\"460kg\"}," +
+                "{\"id\":4,\"attack\":\"Solar Beam\",\"height\":\"2.0m\",\"name\":\"Venusaur\",\"type\":\"Grass/Poison\",\"typeColour\":\"green\",\"weight\":\"100kg\"}]";
     }
 }

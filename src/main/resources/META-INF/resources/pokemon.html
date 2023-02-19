@@ -48,9 +48,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="pokemon in pokemonList">
+        <tr ng-repeat="pokemon in pokemonList" style="background-color:lightgray">
             <td>{{ pokemon.name }}</td>
-            <td>{{ pokemon.type }}</td>
+            <td style="color:{{ pokemon.typeColour }}">{{ pokemon.type }}</td>
             <td>{{ pokemon.height }}</td>
             <td>{{ pokemon.weight }}</td>
             <td>{{ pokemon.attack }}</td>

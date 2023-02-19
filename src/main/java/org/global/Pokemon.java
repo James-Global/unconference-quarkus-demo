@@ -14,6 +14,9 @@ public class Pokemon extends PanacheEntity {
     @Column(name = "type")
     public String type;
 
+    @Column(name = "typeColour")
+    public String typeColour;
+
     @Column(name = "height")
     public String height;
 
